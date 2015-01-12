@@ -139,12 +139,12 @@ module SyslogRuby
             end
 
       proto_msg = if @local
-                    "<#{facility + level}> "\
+                    "<#{facility + level}>"\
                       "#{ident}" \
                       ": " \
                       "#{msg}\n"
                   else
-                    "<#{facility + level}> "\
+                    "<#{facility + level}>"\
                       "#{Time.now.strftime('%b %d %H:%M:%S')} " \
                       "#{hostname} " \
                       "#{ident}" \
