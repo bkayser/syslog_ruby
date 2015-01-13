@@ -138,6 +138,8 @@ module SyslogRuby
               message
             end
 
+      # Replace newlines with '; '
+      msg.gsub! "\n", "; "
       proto_msg = if @local
                     "<#{facility + level}>"\
                       "#{ident}" \
